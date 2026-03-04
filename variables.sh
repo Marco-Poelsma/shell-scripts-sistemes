@@ -27,4 +27,17 @@ divisioEnters=$[6/7]
 
 echo $divisioEnters
 
-echo -e "6/7" | bc -l
+echo -e "scale=5; 6/7" | bc -l | awk '{printf "%.5f\n", $0}'
+
+# Podem llegir l'input de l'usuari fent servir read
+
+echo -e "Introdueix el dia"
+read dia
+
+echo -e "\nIntrodueix el mes"
+read mes
+
+echo -e "\nIntrodueix l'any"
+read any
+
+echo -e "Avui és el $dia de $mes de l'any $any \n"
