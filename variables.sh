@@ -41,3 +41,35 @@ echo -e "\nIntrodueix l'any"
 read any
 
 echo -e "Avui és el $dia de $mes de l'any $any \n"
+
+# Condicionals
+
+# If... else if... else
+
+if [ 1 -eq 1 ]; then
+	echo "1 és el mateix que 1"
+elif [ 1 -eq 2]; then
+	echo "1 és el mateix que 2"
+else
+	echo "1 no és el mateix que 1"
+fi
+
+# Switch-case
+
+echo -e "Introdueix 1, 2 o 3"
+read opcio
+
+case $opcio in
+	1)
+		echo -e "Has introduit 1"
+		;;
+	2)
+		echo -e "Has introduit 2"
+		;;
+	3)
+		echo -e "Has introduit 3"
+		;;
+	*)
+		echo -e "No has introduit 1, 2 o 3"
+		;;
+esac
